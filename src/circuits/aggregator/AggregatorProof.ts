@@ -2,7 +2,6 @@ import { Experimental } from 'snarkyjs';
 import { AggregatorState } from './AggregatorState';
 import { UserProof } from '../user/UserProof';
 import { SelfProof, ZkProgram } from 'snarkyjs/dist/node/lib/proof_system';
-import { Proof } from 'snarkyjs/dist/node/lib/circuit';
 import { UserState } from '../user/UserState';
 
 export const AggregatorProof = Experimental.ZkProgram({
