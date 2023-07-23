@@ -26,12 +26,23 @@ export const AggregatorProof = Experimental.ZkProgram({
         earlierProof.verify();
         userProof.verify();
 
-        earlierProof.publicInput.cipher_1.add(userProof.publicInput.vote_1, userProof.publicInput.vote_1.n_squared).c.assertEquals(publicInput.cipher_1.c);
-        earlierProof.publicInput.cipher_2.add(userProof.publicInput.vote_2, userProof.publicInput.vote_2.n_squared).c.assertEquals(publicInput.cipher_2.c);
+        earlierProof.publicInput.cipher_1
+        .add(userProof.publicInput.vote_1, userProof.publicInput.vote_1.n_squared)
+        .c
+        .assertEquals(publicInput.cipher_1.c);
+        earlierProof.publicInput.cipher_2
+        .add(userProof.publicInput.vote_2, userProof.publicInput.vote_2.n_squared)
+        .c
+        .assertEquals(publicInput.cipher_2.c);
 
-        publicInput.electionID.assertEquals(earlierProof.publicInput.electionID);
+        publicInput
+        .electionID
+        .assertEquals(earlierProof.publicInput.electionID);
 
-        userProof.publicInput.electionID.assertEquals(userProof.publicInput.electionID);
+        userProof
+        .publicInput
+        .electionID
+        .assertEquals(userProof.publicInput.electionID);
       }
         
     },
